@@ -1,16 +1,14 @@
 <p align="center">
-  <img src="Images/EquityIQ_Big.jpeg" alt="EquityIQ" width="420">
-</p>
-
-<h1 align="center">EquityIQ</h1>
-
-<p align="center">
-  An AI equity research assistant that answers questions about public companies with live market data, news and analyst style reasoning.
+  <a href="https://equityiq.streamlit.app"><img src="Images/banner.png" alt="EquityIQ: AI equity research agent"></a>
 </p>
 
 <p align="center">
   <a href="https://equityiq.streamlit.app"><b>Live demo</b></a>
 </p>
+
+# EquityIQ
+
+An AI equity research assistant that answers questions about public companies with live market data, news and analyst style reasoning.
 
 ---
 
