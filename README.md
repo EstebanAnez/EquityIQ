@@ -8,6 +8,8 @@
 
 # EquityIQ
 
+[![tests](https://github.com/EstebanAnez/EquityIQ/actions/workflows/tests.yml/badge.svg)](https://github.com/EstebanAnez/EquityIQ/actions/workflows/tests.yml)
+
 An AI equity research assistant that answers questions about public companies with live market data, news and analyst style reasoning.
 
 ---
@@ -74,6 +76,17 @@ streamlit run app.py
 
 The FAISS index ships with the repo. To rebuild it from your own documents, put them in a `rag_files/` folder and run `python build_faiss_index.py`.
 
+## Tests
+
+The research tools have unit tests that run on every push with GitHub Actions. Market data is mocked, so they run offline with no API keys:
+
+```bash
+pip install yfinance requests streamlit langchain pytest
+pytest -v
+```
+
+They check that ratio signals are classified correctly (cheap vs premium valuation, thin vs strong margins, contraction vs strong growth, low vs high beta) and that missing data is reported instead of invented.
+
 ## Project structure
 
 | File | Purpose |
@@ -83,6 +96,7 @@ The FAISS index ships with the repo. To rebuild it from your own documents, put 
 | `EquityIQ_tools.py` | The five research tools |
 | `build_faiss_index.py` | Builds the vector index from research documents |
 | `faiss_index/` | Prebuilt vector index |
+| `tests/` | Unit tests for the tools |
 
 ## Disclaimer
 
